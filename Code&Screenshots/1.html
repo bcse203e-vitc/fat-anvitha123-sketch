@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics Calculator</title>
+    <script src="statistics.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .output div {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Statistics Calculator</h1>
+
+    <div class="container">
+        <label for="numbers">Enter numbers separated by spaces:</label>
+        <input type="text" id="numbers" placeholder="e.g. 10 20 30 40 50">
+
+        <div class="error" id="error"></div>
+
+        <button onclick="calculateMean()">Mean</button>
+        <button onclick="calculateVariance()">Variance</button>
+        <button onclick="calculateStdDev()">Standard Deviation</button>
+
+        <div class="output" id="output"></div>
+    </div>
+
+</body>
+</html>
